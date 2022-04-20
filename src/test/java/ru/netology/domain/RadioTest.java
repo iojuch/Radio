@@ -84,12 +84,12 @@ class RadioTest {
         radio.IncreaseVolume();
         assertEquals(100, radio.getCurrentVolume());
     }
-        @Test
-        public void shouldSetNextVolumeBelowTheMax() {
-            Radio radio = new Radio(5, 99, 10, true);
-            radio.IncreaseVolume();
-            assertEquals(100, radio.getCurrentVolume());
-        }
+    @Test
+    public void shouldSetNextVolumeBelowTheMax() {
+        Radio radio = new Radio(5, 99, 10, true);
+        radio.IncreaseVolume();
+        assertEquals(100, radio.getCurrentVolume());
+    }
 
     @Test
     public void shouldSetNextVolumeAboveTheMax() {
