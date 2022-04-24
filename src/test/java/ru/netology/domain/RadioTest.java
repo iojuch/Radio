@@ -73,7 +73,7 @@ class RadioTest {
     @Test
     public void shouldSetNextVolumeMin() {
         Radio radio = new Radio(5, 0, 10, true);
-        radio.IncreaseVolume();
+        radio.increaseVolume();
         assertEquals(1, radio.getCurrentVolume());
     }
 
@@ -81,22 +81,24 @@ class RadioTest {
     @Test
     public void shouldSetNextVolumeMax() {
         Radio radio = new Radio(9, 100, 10, true);
-        radio.IncreaseVolume();
+        radio.increaseVolume();
         assertEquals(100, radio.getCurrentVolume());
     }
-        @Test
-        public void shouldSetNextVolumeBelowTheMax() {
-            Radio radio = new Radio(5, 99, 10, true);
-            radio.IncreaseVolume();
-            assertEquals(100, radio.getCurrentVolume());
-        }
+
+    @Test
+    public void shouldSetNextVolumeBelowTheMax() {
+        Radio radio = new Radio(5, 99, 10, true);
+        radio.increaseVolume();
+        assertEquals(100, radio.getCurrentVolume());
+    }
 
     @Test
     public void shouldSetNextVolumeAboveTheMax() {
         Radio radio = new Radio(5, 101, 10, true);
-        radio.IncreaseVolume();
+        radio.increaseVolume();
         assertEquals(100, radio.getCurrentVolume());
     }
+
     @Test
     public void shouldSetPrevVolumeBelowTheMin() {
         Radio radio = new Radio(5, -1, 10, true);
