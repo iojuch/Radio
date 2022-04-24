@@ -77,7 +77,6 @@ class RadioTest {
         assertEquals(1, radio.getCurrentVolume());
     }
 
-
     @Test
     public void shouldSetNextVolumeMax() {
         Radio radio = new Radio(9, 100, 10, true);
