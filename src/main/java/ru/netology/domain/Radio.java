@@ -14,7 +14,6 @@ public class Radio {
         return (amountStation - 1);
     }
 
-
     public Radio() {
     }
 
@@ -26,7 +25,6 @@ public class Radio {
         this.maxVolume = maxVolume;
         this.on = on;
     }
-
 
     public boolean isOn() {
         return on;
@@ -46,7 +44,6 @@ public class Radio {
         return currentVolume;
     }
 
-
     public void setCurrentNextStation() {
         if (currentStation == maxStation) {
             currentStation = 0;
@@ -62,7 +59,6 @@ public class Radio {
             currentStation -= 1;
         }
     }
-
 
     public void increaseVolume() {
         if (currentVolume < maxVolume) {
