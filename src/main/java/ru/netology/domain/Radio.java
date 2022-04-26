@@ -13,38 +13,13 @@ public class Radio {
     private int currentVolume;
     private int amountStation = 10;
     private int minStation = 0;
-    private int maxStation;
+    private int maxStation = calculateMaxStation();
     private int minVolume = 0;
     private int maxVolume = 100;
     private boolean on;
 
-
-    public Radio(int currentStation, int currentVolume, int amountStation, boolean on) {
-        this.currentStation = currentStation;
-        this.currentVolume = currentVolume;
-        this.amountStation = amountStation;
-        this.maxStation = amountStation - 1;
-        this.maxVolume = maxVolume;
-        this.on = on;
-    }
-
-
-    public boolean isOn() {
-        return on;
-    }
-
-    public void setOn(boolean on) {
-        this.on = on;
-    }
-
-    public int getCurrentStation() {
-
-        return currentStation;
-    }
-
-    public int getCurrentVolume() {
-
-        return currentVolume;
+    private int calculateMaxStation() {
+        return (amountStation - 1);
     }
 
     public void setCurrentNextStation() {
@@ -63,7 +38,7 @@ public class Radio {
         }
     }
 
-    public void IncreaseVolume() {
+    public void increaseVolume() {
         if (currentVolume < maxVolume) {
             currentVolume += 1;
         } else {
