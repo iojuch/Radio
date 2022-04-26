@@ -17,13 +17,8 @@ public class Radio {
     public Radio() {
     }
 
-    public Radio(int currentStation, int currentVolume, int amountStation, boolean on) {
-        this.currentStation = currentStation;
-        this.currentVolume = currentVolume;
-        this.amountStation = amountStation;
-        this.maxStation = amountStation - 1;
+    public Radio( int amountStation) {
         this.maxVolume = maxVolume;
-        this.on = on;
     }
 
     public boolean isOn() {
@@ -42,6 +37,13 @@ public class Radio {
     public int getCurrentVolume() {
 
         return currentVolume;
+    }
+    public void setCurrentVolume(int currentVolume) {
+        this.currentVolume = currentVolume;
+    }
+
+    public void setCurrentStation(int currentStation) {
+        this.currentStation = currentStation;
     }
 
     public void setCurrentNextStation() {
