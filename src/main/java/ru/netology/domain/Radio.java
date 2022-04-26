@@ -18,7 +18,7 @@ public class Radio {
     }
 
     public Radio( int amountStation) {
-        this.maxVolume = maxVolume;
+        this.amountStation = amountStation;
     }
 
     public boolean isOn() {
