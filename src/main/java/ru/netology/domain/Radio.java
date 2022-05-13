@@ -45,10 +45,10 @@ public class Radio {
 
     public void setCurrentStation(int newCurrentStation) {
         if (newCurrentStation > maxStation) {
-            newCurrentStation = maxStation;
+            return;
         }
         if (newCurrentStation < minStation) {
-            newCurrentStation = minStation;
+            return;
         }
         this.currentStation = newCurrentStation;
     }
