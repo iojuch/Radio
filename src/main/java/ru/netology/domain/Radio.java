@@ -43,18 +43,14 @@ public class Radio {
         this.currentVolume = currentVolume;
     }
 
-    public void setCurrentStation(int currentStation) {
-        this.currentStation = currentStation;
-    }
-
-    public void setNumberStation(int newNumberStation) {
-        if (newNumberStation > maxStation) {
-            newNumberStation = maxStation;
+    public void setCurrentStation(int newCurrentStation) {
+        if (newCurrentStation > maxStation) {
+            newCurrentStation = maxStation;
         }
-        if (newNumberStation < minStation) {
-            newNumberStation = minStation;
+        if (newCurrentStation < minStation) {
+            newCurrentStation = minStation;
         }
-        currentStation = newNumberStation;
+        this.currentStation = newCurrentStation;
     }
 
 
