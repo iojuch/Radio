@@ -51,9 +51,15 @@ class RadioTest {
 
     @Test
     public void shouldSetNumberStationAboveTheMax() {
-        Radio radio = new Radio();
+        Radio radio = new Radio(10);
         radio.setCurrentStation(10);
         assertEquals(0, radio.getCurrentStation());
+    }
+    @Test
+    public void shouldSetNumberStationAboveTheMaxI() {
+        Radio radio = new Radio(20);
+        radio.setCurrentStation(15);
+        assertEquals(15, radio.getCurrentStation());
     }
 
     @Test
@@ -87,6 +93,14 @@ class RadioTest {
     public void shouldSetNextStationAboveTheMax() {
         Radio radio = new Radio(10);
         radio.setCurrentStation(9);
+        radio.setCurrentNextStation();
+        assertEquals(0, radio.getCurrentStation());
+
+    }
+    @Test
+    public void shouldSetNextStationAboveTheMaxIncreased() {
+        Radio radio = new Radio(20);
+        radio.setCurrentStation(19);
         radio.setCurrentNextStation();
         assertEquals(0, radio.getCurrentStation());
 
