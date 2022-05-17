@@ -4,7 +4,8 @@ public class Radio {
     private int currentStation;
     private int currentVolume;
     private int minStation = 0;
-    private int maxStation = 10;
+    private int amountStation = 10;
+    private int maxStation = amountStation - 1;
     private int minVolume = 0;
     private int maxVolume = 100;
     private boolean on;
@@ -13,8 +14,9 @@ public class Radio {
     public Radio() {
     }
 
-    public Radio(int maxStation) {
-        this.maxStation = maxStation;
+    public Radio(int amountStation) {
+        this.amountStation = amountStation;
+      maxStation = amountStation - 1;
     }
 
     public boolean isOn() {
@@ -40,8 +42,7 @@ public class Radio {
     }
 
     public void setCurrentStation(int newCurrentStation) {
-        maxStation = maxStation - 1;
-        if (newCurrentStation > maxStation) {
+        if (newCurrentStation > maxStation ) {
             return;
         }
         if (newCurrentStation < minStation) {
